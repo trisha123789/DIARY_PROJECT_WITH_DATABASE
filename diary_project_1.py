@@ -10,7 +10,9 @@ Your Selection:
 
 welcome = "Welcome to the programming diary!"
 print(welcome)
-
+def create_table():
+    with sqlite3.connect("diary_data.db", timeout=10) as conn:
+        conn.execute("CREATE TABLE IF NOT EXISTS entries(work TEXT, date TEXT);")
 # make sure table exists
 create_table()
 
@@ -31,3 +33,4 @@ while (user := input(menu)) != "3":
         # (we can add view_entries() later)
     else:
         print("Invalid option, please try again")
+
