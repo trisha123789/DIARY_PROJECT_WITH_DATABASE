@@ -1,4 +1,4 @@
-from database import create_table
+
 import sqlite3
 menu = """
 Please select one of the following options:
@@ -33,4 +33,5 @@ while (user := input(menu)) != "3":
         # (we can add view_entries() later)
     else:
         print("Invalid option, please try again")
+
 
